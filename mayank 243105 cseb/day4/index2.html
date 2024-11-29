@@ -8,25 +8,67 @@
     <style>
         .parent {
             display: flex;
-            justify-content: center;
+            justify-content: ;
             align-items: self-start;
-            background-image: url("https://images.pexels.com/photos/29494188/pexels-photo-29494188/free-photo-of-snow-capped-peaks-in-ladakh-india.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-            border: 5px solid blue;
+            /* background-image: url("https://images.pexels.com/photos/29494188/pexels-photo-29494188/free-photo-of-snow-capped-peaks-in-ladakh-india.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+            background-color: rgb(111, 0, 255);
             height: 70px;
+            width: 1700px;
             background-position: center;
             background-size: cover;
-            padding: 10px;
+
+            position: fixed;
         }
 
         .child {
             display: flex;
-            justify-content: center;
-            margin-right: 700px;
+            margin-right: 350px;
+
+
         }
-        .child1 ul li a:hover{
-            border-color: black;cursor: pointer;
+
+        .child1 {
+            display: flex;
+            margin-right: 350px;
+            padding-top: 9px;
+        }
+
+        .child2 {
+            padding-top: 9px;
+        }
+
+        .child1 ul li a:hover {
+            border-color: black;
+            cursor: pointer;
             color: black;
+            background-color: rgb(206, 219, 206);
+            position: relative;
         }
+
+        .child2 ul li a:hover {
+            border-color: black;
+            cursor: pointer;
+            color: black;
+            background-color: green;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .CONTENT {
+            height: 948px;
+            background-color: rgb(111, 0, 255);
+            display: flex;
+            justify-content: ;padding-left: 150px;
+            align-items: center;
+            font-size: 20px;
+        }
+        .box div{width: 50px;height: 50px;}
+.box div:hover{width: 200px;transition-duration: 3s;}
+
+.box1{border:2px solid;height: 40px;width: 200px; position: absolute; right: 0px; top: 400px;background-color: rgb(255, 145, 0); }
+.box2{border:2px solid;height: 40px;width: 200px; position: absolute; right: 0px; top: 470px;background-color:  rgb(255, 145, 0); }
+.box3{border:2px solid;height: 40px;width: 200px; position: absolute; right: 0px;top: 540px;background-color:  rgb(255, 145, 0); }
+.box4{border:2px solid;height: 40px;width: 200px; position: absolute;top: 610px;right: 0px; background-color:  rgb(255, 145, 0); }
     </style>
 </head>
 
@@ -39,7 +81,7 @@
         </div>
 
         <div class="child1">
-            <ul style="display: flex;gap: 30px; list-style-type:none;"cour>
+            <ul style="display: flex;gap: 30px; list-style-type:none;" cour>
                 <li><a href="`1">home</a></li>
                 <li><a href="2">contact us</a></li>
                 <li><a href="3">how to reach</a></li>
@@ -47,13 +89,31 @@
                 <li><a href="5">destination</a></li>
                 <li><a href="6">about us</a></li>
                 <li><a href="7">acommdating</a></li>
-                <li><a href="8">search</a></li>
+
+            </ul>
+        </div>
+        <div class="child2">
+            <ul style="display: flex;gap: 30px; list-style-type:none;">
+                <li><a href="8"><button>
+                            SEARCH
+                        </button></a></li>
             </ul>
         </div>
     </div>
-    <img src="https://images.pexels.com/photos/24964099/pexels-photo-24964099/free-photo-of-destroyed-pier-on-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="" style=" height:750px" ; width="1708px">
-
+    <div class="CONTENT">
+        <div class="paragraph">
+            <p style="font-style: italic;"><h1>Lorem ipsum dolor sit <br>amet consectetur adipisicing <hr></h1> Officia alias fuga tenetur nisi maxime,<br> totam
+                recusandae quia, ad et eveniet,<br> modi nam quidem unde impedit <br> exercitationem ab dolore officiis
+                voluptate. <br><div class="button"></div></p>
+                <div class="box div">
+                    <div class="box1"></div>
+                    <div class="box2"></div>
+                    <div class="box3"></div>
+                    <div class="box4"></div>
+                   </div>
+        </div>
+        
+    </div>
 </body>
 
 </html>
