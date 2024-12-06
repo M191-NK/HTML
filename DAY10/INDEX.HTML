@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        form input{
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1> This is form validation</h1>
+        <label for="">username</label>
+        <input type="text" value="" id="username" >
+        <label for="">E-mail</label>
+        <input type="email" value="" id="E-mail"
+        <label for="">password</label>
+        <input type="password" value="" id="password">
+        <label for="">confirm password</label>
+        <input type="password" value="" id="confirm password">
+        <button onclick="submitForm()">submit</button>
+        
+
+    </form>
+    <script>
+        const validateEmail=(email)=>{
+            if(email.includes(".")&& email.includes("@")){
+
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        const submitForm=()=>{
+            let username = document.getElementById("username").value
+            let password = document.getElementById("password").value
+            let confirmPassword = document.getElementById("confirm password").value
+            console.log("checking the form")
+            if(!username || !password || !confirmPassword){
+                window.alert("please enter all the inputs ")
+                return
+            }
+            if(password.length<8){
+                window.alert("please enter a 8 digit password")
+                return
+            }
+            if(password !== confirmPassword){
+                window.alert("Password do not match")
+                return
+            }
+            if(!validateEmail(email)){
+                window.alert("please enter a valid E-mail address")
+                return
+            }
+            else{
+                window.alert("form submitted successfully")
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
