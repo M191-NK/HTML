@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            margin: 0;
+        }
+        .solar-system {
+            position: relative;
+            width: 800px;
+            height: 800px;
+        }
+        .sun, .planet {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        
+        .sun {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .planet {
+            animation: orbit linear infinite;
+            border: 1px solid white;
+        }
+        @keyframes orbit {
+            from {
+                transform: rotate(0deg) translateX(250px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(250px) rotate(-360deg);
+            }
+        }
+        .mercury {
+            background-color: gray;
+            width: 10px;
+            height: 10px;
+            animation-duration: 3s;
+            transform: translate(50px);
+        }
+        .venus {
+            background-color: yellow;
+            width: 15px;
+            height: 15px;
+            animation-duration: 4s;
+            transform: translate(80px);
+        }
+        .earth {
+            background-color: blue;
+            width: 20px;
+            height: 20px;
+            animation-duration: 5s;
+            transform: translate(120px);
+        }
+        .mars {
+            background-color: red;
+            width: 18px;
+            height: 18px;
+            animation-duration: 6s;
+            transform: translate(150px);
+        }
+        
+        .saturn {
+            background-color: gold;
+            width: 25px;
+            height: 25px;
+            animation-duration: 8s;
+            transform: translate(250px);
+        }
+        .uranus {
+            background-color: lightblue;
+            width: 22px;
+            height: 22px;
+            animation-duration: 9s;
+            transform: translate(300px);
+        }
+        .neptune {
+            background-color: blue;
+            width: 22px;
+            height: 22px;
+            animation-duration: 10s;
+            transform: translate(350px);
+        }
+    </style>
+</head>
+<body>
+    <div class="solar system"> 
+        <div class="sun"></div>
+        <div class="orbit mercury-orbit">
+            <div class="planet mercury"></div>
+        </div>
+        <div class="orbit venus-orbit">
+            <div class="planet venus"></div>
+        </div>
+        <div class="orbit earth-orbit">
+            <div class="planet earth"></div>
+        </div>
+        <div class="orbit jupiter">
+            <div class="planet jupiter"></div>
+        </div>
+        <div class="orbit saturn-orbit">
+            <div class="planet saturn"></div>
+        </div>
+        <div class="orbit uranus-orbit">
+            <div class="planet uranus"></div>
+        </div>
+        <div class="orbit neptune-orbit">
+            <div class="planet neptune"></div>
+        </div>
+     </div>
+</body>
+</html>
